@@ -1,0 +1,28 @@
+--调用存储过程
+begin 
+  prod_test;
+  end;
+  
+  begin
+   prod_adddept(50,'BOSS'); 
+  end;
+  
+  begin 
+     prod_updatesal(9000,-1050);
+    end;
+    
+  begin
+    prod_selectmgr(7369);
+    end;
+    
+    --调用存储过程 有返回参数
+    declare
+     v_mgr number;
+    begin
+       
+      end;
+  
+  
+  select * from dept;
+  
+  select * from emp;

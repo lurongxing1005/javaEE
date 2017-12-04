@@ -1,0 +1,88 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="../jquery-3.2.0.min.js"></script>
+    
+    <script type="text/javascript">
+     /*  $(document).ready(function(){
+         var value =  $("#div1").html();
+         console.debug(value);
+         
+      }); */
+      
+      //推荐使用
+      $(function(){
+         var value =  $("#div1").html();
+         console.debug(value);
+         
+         //1.单击事件
+         $("#div1").bind("click",function(){
+            alert("哈哈");
+         });
+         
+         //推荐使用
+         $("#div1").click(function(){
+            alert("呵呵");
+         });
+         
+         //2.双击事件
+         $("p").dblclick(function(){
+            $(this).hide();
+         });
+         
+         //3.鼠标事件
+         /* $("#p1").mouseenter(function(){
+            alert("进入");
+         });
+         $("#p2").mouseleave(function(){
+            alert("离开");
+         }); */
+         
+         $("#p3").mousedown(function(){
+            alert("按下");
+         });
+         $("#p4").mouseup(function(){
+            alert("放开");
+         });
+         
+         
+         //4.blur
+         $("input").blur(function(){
+           $(this).css('background-color','blue');
+         });
+         
+         //5.focus
+         $("input").focus(function(){
+           $(this).css('background-color','red');
+         });
+         
+         
+         
+         
+      });
+    
+    
+    </script>
+  </head>
+  
+  <body>
+     <div id="div1">div1</div>
+     <p>双击点我,我就消失</p>
+     <p>继续双击点我,我就消失</p>
+     <p id="p1">鼠标进入了</p>
+     <p id="p2">鼠标离开</p>
+     <p id="p3">鼠标按下</p>
+     <p id="p4">鼠标放开</p>
+     
+              用户名:<input type="text" name="username"><br/>
+              密码:<input type="text" name="password"><br/>
+     
+  </body>
+</html>

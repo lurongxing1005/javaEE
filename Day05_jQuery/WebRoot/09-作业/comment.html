@@ -1,0 +1,42 @@
+<!DOCTYPE HTML >
+<html>
+  <head>
+    <title>comment.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+   <script type="text/javascript" src="../jquery-3.2.0.min.js"></script>
+   <script type="text/javascript">
+      $(function(){
+         $("#btn_submit").click(function(){
+             var text = $("#text").val();
+             var nickname = $("#nickname").val();
+             
+              $("#articleContent").prepend("<h6>我是"+nickname+" "+new Date().toLocaleString()+"</h6><p style='color:red'>"+text+"</p>");
+         });
+      });
+      
+   </script>
+  </head>
+  
+  <body>
+     <div>
+        <h6>评论(777)</h6>
+        
+        <p>
+        <textarea id="text" rows="5" cols="100" placeholder="请输入你的评论" ></textarea>
+        </p>
+        
+        <input type="text" id="nickname" value="匿名">
+        <input type="button" id="btn_submit" value="发布">
+        <article id="articleContent">
+           <h6>我是xxx,2017/10/16 777楼</h6>
+           <p style="color:red">楼上是SB</p>
+        </article>
+     
+     </div>
+  </body>
+</html>

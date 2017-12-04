@@ -1,0 +1,2 @@
+CREATE VIEW my_view
+AS SELECT DNAME FROM dept;

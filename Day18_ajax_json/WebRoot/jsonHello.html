@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>jsonHello.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+    
+    //定义一个对象
+    this.p = function(){
+        name = 'will',
+        age = 18,
+        work = function(){
+           console.debug("正在工作中。。。。。");
+        };
+    }; 
+    
+   /* console.debug(p);
+    
+    var ps = [p,p,p];
+    
+    var ps =[{
+        name = 'will',
+        age = 18,
+        work = function(){
+           console.debug("正在工作中。。。。。");
+        };
+    },
+    {
+        name = 'will',
+        age = 18,
+        work = function(){
+           console.debug("正在工作中。。。。。");
+        };
+    },
+    {
+        name = 'will',
+        age = 18,
+        work = function(){
+           console.debug("正在工作中。。。。。");
+        };
+    }]
+    */
+    
+    /* this.p = function(){
+        name : 'will',
+        age : 18,
+        work : function(){
+           console.debug("正在工作中。。。。。");
+        };
+    }; */
+    
+    this.user = {name:'tom',age:18};
+    console.debug(user);
+    
+    //obj----》String
+    console.debug(user.toSource());
+    
+    //String---->obj
+    eval("({name:'tom', age:18})");
+    console.debug(eval("({name:'tom', age:18})"));
+    
+    </script>
+
+  </head>
+  
+  <body>
+    This is my HTML page. <br>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>01-CSS选择器.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+        /* 标签选择器 */
+        div{
+          color: red;
+          font-size: 30px;
+        }
+        p{
+          color: blue;
+          font-size: 15px;
+        }
+        
+        /* 类选择器 */
+        .main{
+          background-color: green;
+        }
+        
+        /* id选择器 */
+        #first{
+           color: green;
+           background-color: orange;
+        }
+        
+        /* 后代选择器 */
+        #test1 div{
+           color: purple;
+        }
+    
+    </style>
+
+  </head>
+  
+  <body>
+     <div class="main">1111111111</div>
+     <div>1111111111</div>
+     <div>1111111111</div>
+     <div>1111111111</div>
+     <p class="main">2222222222222222</p>
+     <div>33333333333</div>
+     <div id="first">44444444444</div>
+     
+     <div id="test1">
+       <p>
+         <div>88888888888888</div>
+       <p>
+     </div>
+     
+  </body>
+</html>

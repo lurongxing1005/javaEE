@@ -1,0 +1,9 @@
+create or replace trigger trigger7
+  before update on dept  
+  for each row
+declare
+  -- local variables here
+begin
+  
+end trigger7;
+/

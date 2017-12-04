@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="11" class="com.etcxm.user" method="dowork"></bean>
+    <bean id="22" class="com.etcxm.Person"></bean>
+</beans>

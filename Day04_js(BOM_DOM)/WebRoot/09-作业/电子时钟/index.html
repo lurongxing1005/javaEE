@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+    <script type="text/javascript">
+    //第一种方式
+     /*  window.onload = function(){
+         setInterval(function(){
+           var date = new Date();
+           document.getElementById("mytimer").innerHTML = date.toLocaleString(); 
+           
+         }, 1000);
+      }; */
+      
+      
+      //第二种方式
+      function showTime(){
+         var date = new Date();
+         document.getElementById("mytimer").innerHTML = date.toLocaleString();
+         //递归调用
+         setTimeout("showTime()", 1000);
+      }
+    
+    </script>
+  </head>
+  
+  <body onload="showTime()">
+     <div id="mytimer"></div>
+  </body>
+</html>

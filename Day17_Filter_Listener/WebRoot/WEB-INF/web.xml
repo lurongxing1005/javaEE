@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" metadata-complete="false"
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 告诉服务器管理过滤器 -->
+ <!--  <filter>
+    <filter-name>HelloFilter</filter-name>
+    <filter-class>com.etcxm_01filter.HelloFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>HelloFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    对请求转发进行配置过滤
+    <dispatcher>FORWARD</dispatcher>
+    对错误进行配置过滤
+    <dispatcher>ERROR</dispatcher>
+  </filter-mapping>  -->
+  
+ <!--  <error-page>
+    <error-code>404</error-code>
+    <location>/error.html</location>
+  </error-page> -->
+  
+  
+ <!--  <filter>
+     <filter-name>CFilter</filter-name>
+     <filter-class>com.etcxm_01filter.CFilter</filter-class>
+  </filter>
+  <filter>
+     <filter-name>AFilter</filter-name>
+     <filter-class>com.etcxm_01filter.AFilter</filter-class>
+  </filter>
+  
+  <filter>
+     <filter-name>BFilter</filter-name>
+     <filter-class>com.etcxm_01filter.BFilter</filter-class>
+  </filter>
+  
+  
+  
+  
+  <filter-mapping>
+    <filter-name>CFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>AFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <filter-mapping>
+    <filter-name>BFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+ <!--  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>com.etcxm_01filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+       <param-name>encoding</param-name>
+       <param-value>UTF-8</param-value>
+    </init-param>
+    
+     是否强制使用
+    <init-param>
+       <param-name>force</param-name>
+       <param-value>true</param-value>
+    </init-param>
+    
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping> -->
+  
+  
+  
+  
+  
+  
+  
+</web-app>

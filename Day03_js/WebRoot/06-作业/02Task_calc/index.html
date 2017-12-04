@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+      function theRet() {
+		 var num1 =  document.getElementById("num1").value;
+		 var num2 =  document.getElementById("num2").value;
+		 
+		 var sele =  document.getElementById("sele").value;
+		 
+		 //字符串---->number
+		 num1 = parseInt(num1);
+		 num2 = parseInt(num2);
+		 var result = 0;
+		
+		switch (sele) {
+
+			case "+":
+                         result = num1+num2;
+				break;
+			case "-":
+                         result = num1-num2;
+				break;
+
+			case "*":
+                         result = num1*num2;
+				break;
+
+			case "/":
+                         result = num1/num2;
+				break;
+
+			default:
+				break;
+			}
+			
+			document.getElementById("ret").value = result;			
+
+		}
+		</script>
+
+  </head>
+  
+  <body>
+      <input type="text" id="num1"><br/><br/>
+      <input type="text" id="num2"><br/><br/>
+      <select id = "sele">
+         <option>请选择</option>
+         <option>+</option>
+         <option>-</option>
+         <option>*</option>
+         <option>/</option>
+      </select>
+      <br/><br/>
+     <input type="button" value="结果" onclick="theRet();"><br/><br/> 
+     <input type="text" id="ret"><br/>
+      
+  </body>
+</html>

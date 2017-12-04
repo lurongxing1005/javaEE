@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Day12_Jsp"
+  id="myeclipse.1508825700570"
+  context-root="/Day12_Jsp"
+  j2ee-spec="6.0"
+  archive="Day12_Jsp.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

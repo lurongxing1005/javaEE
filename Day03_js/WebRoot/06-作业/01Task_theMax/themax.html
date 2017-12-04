@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>themax.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+    <script type="text/javascript">
+       function theMax() {
+         /*1.获取3个input的值  */
+         var a = document.getElementById("num1").value;
+         var b = document.getElementById("num2").value;
+         var c = document.getElementById("num3").value;
+         
+         
+         //字符串---->number
+         a = parseInt(a);
+         b = parseInt(b);
+         c = parseInt(c);
+         
+         var max = a;
+         if(max<b){
+            max = b;
+         }
+         if(max<c){
+           max = c;
+         }
+         
+         
+         //给结果赋值
+         document.getElementById("ret").value = max;
+		 
+	   }
+    
+    
+    </script>
+  </head>
+  
+  <body>
+     <input type="text" id="num1"><br/><br/>
+     <input type="text" id="num2"><br/><br/>
+     <input type="text" id="num3"><br/><br/>
+     
+     <input type="button" value="最大值" onclick="theMax();"><br/><br/>
+     <input type="text" id="ret"><br/>
+  </body>
+</html>

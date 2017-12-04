@@ -1,0 +1,6 @@
+select func_test from dual;
+
+select *from emp;
+
+--º¯Êýµ÷ÓÃ
+select 

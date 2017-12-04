@@ -1,0 +1,239 @@
+--1.定义变量   赋值：  into  :=   字符串拼接 ||
+
+--第一种赋值 :=
+declare
+--定义变量
+ n number;
+ str varchar2(20);
+begin
+  ----业务逻辑
+  n := 100*5;
+  str := 'abc';
+  dbms_output.put_line(n||' '||str);
+  end;
+
+--输入框输入
+
+declare
+  n number;
+  str varchar2(20);
+begin
+  n :='&n';
+  str :='&str' ;
+  dbms_output.put_line(n||' '||str);
+  end;
+  
+  --第二种赋值 into
+  select * from emp;
+  declare
+  --  tname  varchar2(20);
+    tname emp.ename%type;  --使用%type tname的类型和大小 跟ename一样
+  begin
+    select ename into tname from emp where empno=7369; 
+    dbms_output.put_line('名字'|| tname);
+    end;
+    
+    
+    --2.条件判断
+    
+    
+    --IF--THEN
+    --IF-THEN-ELSE
+    --IF-THEN-ELSIF
+  
+  --案例：输入两个数字 比较大小
+  declare
+    n1 number;
+    n2 number;
+  begin
+   n1 := '&n1';
+   n2 := '&n2';
+   
+   if n1> n2 then
+     dbms_output.put_line('n1比较大');
+   elsif  n1 < n2 then  
+     dbms_output.put_line('n2比较大');
+   else
+      dbms_output.put_line('n1==n2');  
+   end if; ---结束if  
+  end;
+  
+  --条件判断
+  --CASE
+  --CASE selector
+    WHEN exp1 THEN set1；
+    WHEN exp2 THEN set2；
+    ELSE ..
+      end CASE;
+      
+   --案例：输入一个数字  如果是1 男   如果是0 女  否则 其他  
+   declare
+     n1 number;
+     str varchar2(10);
+   begin
+     n1 := '&n1';
+     case n1
+       when 1 then str:='男';
+       when 0 then str:='女';
+       else str := '其他';
+     end case;  
+      dbms_output.put_line('性别 '||str); 
+     end;  
+     
+     --case 等值比较 条件比较是否可以？可以
+     --案例：积分8000分 5折   5000分 7折    其他的打骨折
+    
+   declare
+     jifen number;
+   begin
+     jifen := '&jifen';
+     
+     case 
+      when jifen>=8000 then 
+        dbms_output.put_line('5折');
+       when jifen>=5000 then 
+        dbms_output.put_line('7折');
+       else 
+        dbms_output.put_line('骨折');  
+      end case;  
+     end;  
+     
+     
+     --3.循环结构
+     --LOOP 无限循环 必须if exit 或 when exit
+     --WHILE--LOOP 带条件循环
+     --FOR--LOOP  固定次数的循环
+     
+     --累加从1到100
+     
+     --第一种 
+     --A.loop  +   if exit
+     declare
+        i number := 1;
+        total number := 0;
+     begin
+       loop
+         total := total+i;
+         i := i+1;
+         if i>100 then exit;
+         end if;
+       end loop; 
+       dbms_output.put_line('if_total '||total); 
+       
+       end;
+        --A.loop  +   when exit
+     
+      declare
+        i number := 1;
+        total number := 0;
+     begin
+       loop
+         total := total+i;
+         i := i+1;
+         exit when i>100;
+       end loop; 
+       dbms_output.put_line('when_total '||total); 
+       
+       end;
+     
+     
+     --第二种 while-loop
+     declare
+        i number := 1;
+        total number := 0;
+     begin
+       while i<=100 loop
+         total := total+i;
+         i := i+1;
+       end loop;
+       dbms_output.put_line(total);     
+       
+        end;
+        
+        --第三种 for
+        declare
+          -- i number := 1;
+           total number := 0;
+        begin
+           for i in 1..100 loop
+            total := total+i;
+            end loop;
+      
+          dbms_output.put_line(total);     
+       
+        end; 
+        
+        
+        -- %type  列
+        select * from emp where empno = 7521;
+        declare
+           v_no  emp.empno%type;
+           ename  emp.ename%type;
+           job   emp.job%type;
+           mgr   emp.mgr%type;
+        begin
+          
+        end;
+        
+        
+        --%rowtype 行
+         declare
+           v_no  emp.empno%type;
+           my_row  emp%rowtype;
+        begin
+         v_no := 7521;
+         select * into my_row from emp where empno = v_no;
+         
+         dbms_output.put_line(my_row.ename||' '||my_row.job||'   '||my_row.sal); 
+
+        end;
+        
+        
+        
+        --异常
+        
+        declare
+          v_num number := 2;
+        begin
+         v_num := 12/v_num;
+         dbms_output.put_line('ok');
+         exception  
+        
+         --异常处理代码
+         when others then
+           dbms_output.put_line('exception');
+        end;
+        
+        
+        select * from tab_student;
+        
+        --插入一条数据
+        declare
+          stuId  tab_student.stu_id%type;
+          stuName  tab_student.stu_name%type;
+          stuAge  tab_student.stu_age%type;
+        begin
+          stuId := 222;
+          stuName := '张飞';
+          stuAge := 149;
+          insert into tab_student values(stuId,stuName,stuAge);  
+          commit; 
+          
+          end;
+        
+        
+        
+        
+        
+     
+      
+     
+     
+     
+  
+  
+  
+  
+  
+  
+

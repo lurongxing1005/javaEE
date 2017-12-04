@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Day18_ajax_json"
+  id="myeclipse.1510022428242"
+  context-root="/Day18_ajax_json"
+  j2ee-spec="6.0"
+  archive="Day18_ajax_json.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

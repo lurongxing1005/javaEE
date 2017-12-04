@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+     <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+       // alert($); 测试
+       
+       //原生js
+       function change1(){
+          document.getElementById("div1").innerHTML = "divdiv1";
+       }
+       
+        //jQuery
+       function change2(){
+          $("#div2").text("divdiv2");
+       }
+       
+       //---------------------------------------
+       //原生的js
+       window.onload = function(){
+         document.getElementById("btn1").onclick = function(){
+            document.getElementById("div1").innerHTML = "divdiv11111111";
+         };
+       
+       };
+       
+       //jQuery
+       $(function(){
+          $("#btn2").click(function(){
+             $("#div2").html("divdiv222222222");
+          });
+       });
+       
+       
+    </script>
+   
+  
+  </head>
+  
+  <body>
+     <div id="div1">DIV1</div>
+     <div id="div2">DIV2</div>
+     <input  type="button"  value="原生JS" id="btn1">  <!-- onclick="change1() -->
+     <input  type="button"  value="jQuery" id="btn2">  <!-- onclick="change2()" -->
+  </body>
+  </body>
+</html>

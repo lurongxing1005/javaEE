@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <!-- <display-name></display-name>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list> -->
+  
+  <!--  告诉tomcat来管理Servlet -->
+  <servlet>
+     <servlet-name>HelloServlet</servlet-name>
+     <servlet-class>com.etcxm._01servlet.HelloServlet</servlet-class>
+     <!--  定义初始化参数  -->
+     <init-param>
+       <param-name>encoding</param-name>
+       <param-value>UTF-8</param-value>
+     </init-param>
+     
+     <init-param>
+       <param-name>name</param-name>
+       <param-value>rose</param-value>
+     </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <!-- 定义Servlet的资源名 -->
+    <url-pattern>/hehe</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+    <servlet-name>DemoHttpServlet</servlet-name>
+    <servlet-class>com.etcxm._02httpServlet.DemoHttpServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>DemoHttpServlet</servlet-name>
+   <url-pattern>/haha</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>RequestDemoServlet</servlet-name>
+    <servlet-class>com.etcxm._02httpServlet.RequestDemo</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>RequestDemoServlet</servlet-name>
+   <url-pattern>/request</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>registerServlet</servlet-name>
+    <servlet-class>com.etcxm._03registerDemo.registerServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>registerServlet</servlet-name>
+   <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+    <servlet-name>ResponseServlet</servlet-name>
+    <servlet-class>com.etcxm._04responseDemo.ResponseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+   <servlet-name>ResponseServlet</servlet-name>
+   <url-pattern>*.etcxm</url-pattern>
+  </servlet-mapping>
+  <!-- <servlet-mapping>
+   <servlet-name>ResponseServlet</servlet-name>
+   <url-pattern>/response</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+   <servlet-name>ResponseServlet</servlet-name>
+   <url-pattern>/response2</url-pattern>
+  </servlet-mapping> -->
+  
+  
+  
+</web-app>

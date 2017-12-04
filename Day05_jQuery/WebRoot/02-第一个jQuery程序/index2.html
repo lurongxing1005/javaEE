@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index2.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+  <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">
+ </script>
+ 
+ <script type="text/javascript">
+   //原生js
+   window.onload = function(){
+      document.getElementById("a1").onclick = function(){
+         var div1 =  document.getElementById("div1");//.style.display=""
+         if(div1.style.display){  //不为""
+            div1.style.display="";
+         }else{
+           div1.style.display="none";
+         }
+      
+      };
+      
+      
+   
+   };
+   
+   //jQuery
+   $(function(){
+      $("#a2").click(function(){
+        $("#div1").toggle(3000);
+      });
+   });
+   
+   
+ </script>
+  </head>
+  
+  <body>
+     <a href="#" id="a1">原生js_显示/隐藏</a>
+     <a href="#" id="a2">jQuery_显示/隐藏</a>
+     <div id = "div1" style="background-color: gray;display: none;">
+        
+       <h3> 1，JQuery简单背景介绍；</h3>
+   jQuery是继prototype之后又一个优秀的Javascript框架。
+  jQuery是轻量级的js库 ，它兼容CSS3，还兼容各种浏览器（IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+）
+   <h2>jQuery是免费、开源的。</h2>
+jQuery是一个兼容多浏览器的javascript库，核心理念是write less,do more(写得更少,做得更多)
+        
+     </div>
+     
+  </body>
+</html>

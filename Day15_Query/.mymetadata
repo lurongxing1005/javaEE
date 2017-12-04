@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="Day15_Query"
+  id="myeclipse.1509350637528"
+  context-root="/Day15_Query"
+  j2ee-spec="6.0"
+  archive="Day15_Query.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

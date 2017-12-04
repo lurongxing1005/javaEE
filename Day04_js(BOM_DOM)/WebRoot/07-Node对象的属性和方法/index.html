@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>index.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+     <script type="text/javascript">
+       function p(data){
+         console.debug(data);
+       }
+       window.onload = function(){
+        var a1 = document.getElementById("a1");
+         //元素节点
+         p(a1.nodeName);
+         p(a1.nodeValue);
+         p(a1.nodeType);
+         
+         p("--------------------------");
+         //属性节点
+         var a2 = a1.attributes["name"];
+         p(a2.nodeName);
+         p(a2.nodeValue);
+         p(a2.nodeType);
+         
+         //文本节点
+         p("--------------------------");
+         p(a1.firstChild.nodeName);
+         p(a1.firstChild.nodeValue);
+         p(a1.firstChild.nodeType);
+         
+         //------DOM增加/删除/修改
+         var boys = document.getElementById("boys");
+         p(boys.childNodes);
+         p(boys.lastChild);
+         p(boys.lastChild.previousSibling);
+         p(boys.lastChild.previousSibling.nextSibling.hasChildNodes());
+         
+         //需求:把"王健林"添加到"刘强东"后
+         var newBoy = document.getElementById("newBoy");
+         
+         boys.appendChild(newBoy);//添加
+         //boys.removeChild(newBoy);//删除
+         
+         //js创建一个新的div标签
+         
+         //王健林  修改   马龙
+         var newdiv = document.createElement("div");
+         newdiv.innerHTML="马龙";
+         
+         boys.replaceChild(newdiv, newBoy);//修改
+         
+       };
+     
+     </script>
+  </head>
+  
+  <body>
+     <a href="#" name="a2" id="a1">百度一下</a>
+     <div id="newBoy">王健林</div>
+     
+     <div id="boys"><div>马云</div><div>马化腾</div><div>李彦宏</div><div>刘强东</div></div>
+  </body>
+</html>

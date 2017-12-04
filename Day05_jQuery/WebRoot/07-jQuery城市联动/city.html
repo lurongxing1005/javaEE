@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>city.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript" src="../jquery-3.2.0.min.js"></script>
+    <script type="text/javascript">
+      var pro_array=new Array("fj","zj","jx");
+      //将省看成一个元素(数组(市))
+      pro_array["fj"] = ["福州市","厦门市"," 莆田市"," 三明市","泉州市","漳州市","南平市","龙岩市", "宁德市"];
+      pro_array["zj"] = ["杭州市","宁波市","温州市"];
+      pro_array["jx"] = ["南昌市","景德镇市","萍乡市","九江市"];
+      
+      $(function(){
+      //省选择的事件
+         $("#myprovince").change(function(){
+            //清除之前的数据
+            $("#mycity").empty();
+         
+            //获取省选中的值
+            var pro = $("#myprovince").val();
+            
+            /* console.debug(pro);
+            console.debug(pro_array[pro]); */
+            
+            //把各个市添加mycity中
+            for(i=0;i<pro_array[pro].length;i++){
+              $("#mycity").append("<option value="+pro_array[pro][i]+">"+pro_array[pro][i]+"</option>");
+            }
+           
+         });
+      });
+
+    
+    </script>
+  </head>
+  
+  <body>
+     <select id="myprovince">
+          <option>请选择</option>
+          <option value="fj">福建</option>
+          <option value="zj">浙江</option>
+          <option value="jx">江西</option>
+     </select>
+     <select id="mycity">
+         <option>请选择</option>
+       
+     </select>
+  </body>
+</html>

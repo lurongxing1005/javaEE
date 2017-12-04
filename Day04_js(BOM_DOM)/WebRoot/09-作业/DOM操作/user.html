@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>用户新增</title>
+   <script type="text/javascript">
+     window.onload = function() {
+         var id_value = 2;
+		 var btn = document.getElementById("btn_submit");
+		 //给btn添加事件
+		 btn.onclick = function(){
+		    //获取3个输入框的值
+		    var username = document.getElementById("username").value;
+		    var email = document.getElementById("email").value;
+		    var tel = document.getElementById("tel").value;
+		    
+		    //创建行 <tr>
+		    var tr = document.createElement("tr");
+		    //给tr添加id属性
+		    tr.setAttribute("id", id_value);
+		    
+		    
+		    
+		    //创建4个列<td>
+		    var usernametd = document.createElement("td");
+		    usernametd.innerHTML = username;
+		    
+		    var emailtd = document.createElement("td");
+		    emailtd.innerHTML = email;
+		    
+		    var teltd = document.createElement("td");
+		    teltd.innerHTML = tel;
+		    
+		    var deletetd = document.createElement("td");
+		    deletetd.innerHTML="<a href='javascript:deleteEle("+id_value+")'>删除</a>";
+		    
+		    //把4个td 添加到  tr
+		    tr.appendChild(usernametd);
+		    tr.appendChild(emailtd);
+		    tr.appendChild(teltd);
+		    tr.appendChild(deletetd);
+		    
+		    //把tr 添加到 tbody
+		     var userTbody = document.getElementById("userTbody");
+		     userTbody.appendChild(tr);
+		 
+		    id_value++;
+		 };
+	 };
+	 
+	 //删除单行
+	 function deleteEle(id){
+	     var userTbody = document.getElementById("userTbody");
+	     
+	     var deleteTr = document.getElementById(id);
+	     
+	     userTbody.removeChild(deleteTr);
+	     
+	 }
+	 
+	 //删除所有的
+	 function deleteAllEle(){
+	    document.getElementById("userTbody").innerHTML = '';
+	 }
+   
+   
+   </script>
+   
+</head>
+<body>
+	<form name="userForm">
+		<center>
+			用户录入<br/>
+			用户名:<input id="username" name="username" type="text" size=15/>
+			E-mail:<input  id="email" name="email" type="text"  size=15/>
+			电话:<input id="tel" name="tel" type="text" size=15/>
+			<input type="button" value="添加" id="btn_submit"/>
+			<input type="button" value="删除所有" id="btn_removeAll" onclick="deleteAllEle();"/>
+		</center>
+	</form>
+	<hr/>
+	<table border="1" align="center" cellpadding=0 cellspacing=0 width=400> 
+		<thead>
+			<tr>
+				<th>用户名</th>
+				<th>E-mail</th>
+				<th>电话</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="userTbody">
+			<tr id="1">
+				<td>乔峰</td>
+				<td>qiao@163.com</td>
+				<td>18212345678</td>
+				<td><a href='javascript:deleteEle(1)'>删除</a></td>
+			</tr>
+			
+			
+		</tbody>
+	</table>
+	
+	
+</body>
+</html>

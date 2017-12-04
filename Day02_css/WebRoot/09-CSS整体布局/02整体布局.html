@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>02整体布局.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <style type="text/css">
+      #header{
+         background-color: #FF0000;
+         height: 100px;
+         font-size: 30px;
+      }
+      #nav{
+         background-color: #0000FF;
+         height: 500px;
+         width: 200px;
+        /*  float: left;  第一种方式*/
+        
+        display: inline-block; /*第二种方式*/
+         
+      }
+      #content{
+         background-color: #9934FF;
+         height: 500px;
+         width: 500px;
+        /*  margin-left: 230px; 第一种方式*/
+        
+        display: inline-block; /*第二种方式*/
+      }
+      
+      #footer{
+         background-color: #00FF00;
+         height: 80px;
+      }
+    
+    </style>
+    
+  </head>
+  
+  <body>
+	<div id="header">logo</div>
+	<div id="nav">nav</div>
+	<div id="content">content</div>
+	<div id="footer">footer</div>
+
+</body>
+</html>
